@@ -14,6 +14,7 @@ export default function RootApp({ Component, pageProps }: AppProps) {
 			<Head>
 				<title>프리코네 MBTI 궁합</title>
 				<link rel="icon" href="/favicon.ico" />
+				<link rel="prefetch" href="/대문.png" />
 			</Head>
 			<GlobalStyle />
 			<RecoilRoot>
