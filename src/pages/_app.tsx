@@ -15,6 +15,10 @@ export default function RootApp({ Component, pageProps }: AppProps) {
 				<title>프리코네 MBTI 궁합</title>
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="prefetch" href="/banner.png" />
+				<meta
+					property="og:url"
+					content="https://pricone-project.vercel.app/characters/페코린느.png"
+				/>
 			</Head>
 			<GlobalStyle />
 			<RecoilRoot>
