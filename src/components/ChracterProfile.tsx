@@ -17,12 +17,8 @@ export function CharacterProfile(character: CharacterInterface) {
 	}
 
 	return (
-		<Container selected={selected}>
-			<img
-				src={`/characters/${character.name}.png`}
-				alt={character.name}
-				onClick={selectCharacter}
-			/>
+		<Container selected={selected} onClick={selectCharacter}>
+			<img src={`/characters/${character.name}.png`} alt={character.name} />
 			<p className="mbti">{character.mbti}</p>
 		</Container>
 	)
