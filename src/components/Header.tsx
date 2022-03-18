@@ -21,7 +21,7 @@ const Container = styled.header`
 	top: 0;
 	padding: 20px;
 	background-color: ${COLOR.GRAY3};
-	background-image: url(./대문.png);
+	background-image: url(/대문.png);
 	background-size: cover;
 	background-position: center 20%;
 	background-blend-mode: multiply;
