@@ -1,0 +1,51 @@
+{
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wrappingIndent": "same",
+  "editor.wordWrapColumn": 100,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontFamily": "D2Coding ligature",
+  "editor.fontLigatures": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "powermode.enabled": true,
+  "powermode.combo.counterEnabled": "hide",
+  "powermode.explosions.maxExplosions": 1,
+  "powermode.shake.intensity": 0,
+  "powermode.explosions.offset": 0.45,
+  "powermode.explosions.customExplosions": [
+    "https://1.bp.blogspot.com/-HMLljlO52Ls/WxqMY7WLknI/AAAAAAAACos/ovjUekBxB7Un0rXHVUoN5VDxoLy2oWboQCLcBGAs/s1600/a0547d57585fcc052d1ea4172602f969_1494001404_2211.gif"
+  ],
+  "powermode.explosions.backgroundMode": "image",
+  "workbench.colorTheme": "Eva Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tokenColorCustomizations": {
+    "[Material Theme Darker High Contrast]": {
+      "comments": "#646464"
+    }
+  },
+  "workbench.colorCustomizations": {
+    "scrollbarSlider.background": "#ACACAC55"
+  },
+  "typescript.tsdk": "d:\\project\\endand-web\\node_modules\\typescript\\lib",
+  "files.associations": {
+    "*.md": "mdx"
+  },
+  
+}
