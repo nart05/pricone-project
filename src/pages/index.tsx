@@ -22,7 +22,7 @@ const Container = styled.main`
 	gap: 20px;
 	margin: 50px 20px 100px;
 	.wrapper {
-		max-width: 800px;
+		width: 800px;
 	}
 
 	@media screen and (max-width: 1440px) {

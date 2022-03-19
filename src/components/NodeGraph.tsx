@@ -45,7 +45,7 @@ const getTupleEdges = (characters: CharacterInterface[]) => {
 }
 
 const graphStyles: CSSProperties = {
-	width: '100%',
+	width: '800px',
 	height: '800px'
 }
 
@@ -113,7 +113,7 @@ export function NodeGraph() {
 }
 
 const Container = styled.div`
-	max-width: 800px;
+	width: 800px;
 `
 
 const Section = styled.section`
