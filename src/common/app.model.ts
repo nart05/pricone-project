@@ -363,5 +363,15 @@ export const characters: CharacterInterface[] = [
 		id: 67,
 		name: '히요리',
 		mbti: 'ESFP'
+	},
+	{
+		id: 68,
+		name: '란파',
+		mbti: 'INTJ'
+	},
+	{
+		id: 69,
+		name: '미소라',
+		mbti: 'ESFJ'
 	}
 ]
