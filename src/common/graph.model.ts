@@ -1,8 +1,9 @@
 import { Edge, Options } from 'react-graph-vis'
+import { isMobile } from 'react-device-detect'
 
 import { COLOR, MBTI } from './app.model'
 
-export const RADIUS = 300
+export const RADIUS = isMobile ? window.innerWidth / 2 - 40 : 300
 
 export const graphOptions: Options = {
 	interaction: {
@@ -16,7 +17,7 @@ export const graphOptions: Options = {
 			max: 40,
 			min: 40
 		},
-		size: 40,
+		size: isMobile ? 30 : 40,
 		widthConstraint: {
 			maximum: 80,
 			minimum: 80

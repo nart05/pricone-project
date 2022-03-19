@@ -19,7 +19,6 @@ export function Header() {
 const Container = styled.header`
 	position: sticky;
 	top: 0;
-	width: 100%;
 	padding: 20px;
 	background-color: ${COLOR.GRAY3};
 	background-image: url(/banner.png);

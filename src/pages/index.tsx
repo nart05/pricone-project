@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
 import { Characters } from '~components/Characters'
-import { NodeGraph } from '~components/NodeGraph'
 import { MyProfile } from '~components/MyProfile'
+import dynamic from 'next/dynamic'
 
 export default function Main() {
+	const NodeGraph = dynamic(() => import('~components/NodeGraph'), { ssr: false })
+
 	return (
 		<Container>
 			<NodeGraph />
@@ -22,7 +24,7 @@ const Container = styled.main`
 	gap: 20px;
 	margin: 50px 20px 100px;
 	.wrapper {
-		width: 800px;
+		max-width: 800px;
 	}
 
 	@media screen and (max-width: 1440px) {

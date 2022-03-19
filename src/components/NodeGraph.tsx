@@ -3,6 +3,7 @@ import { CSSProperties, useCallback } from 'react'
 import { useRecoilValue } from 'recoil'
 import Graph, { Node, Edge } from 'react-graph-vis'
 import styled from 'styled-components'
+import { isMobile } from 'react-device-detect'
 
 import { myCenterModeState, selectedCharactersState } from '~common/store'
 import { NodeRemoveButton } from './NodeRemoveButton'
@@ -44,12 +45,15 @@ const getTupleEdges = (characters: CharacterInterface[]) => {
 		.reverse()
 }
 
-const graphStyles: CSSProperties = {
-	width: '800px',
-	height: '800px'
+const graphStyles = (): CSSProperties => {
+	console.log(window.innerWidth)
+	return {
+		width: isMobile ? window.innerWidth : '800px',
+		height: isMobile ? window.innerWidth + 40 : '800px'
+	}
 }
 
-export function NodeGraph() {
+export default function NodeGraph() {
 	const selectedCharacters = useRecoilValue(selectedCharactersState)
 	const myCenterMode = useRecoilValue(myCenterModeState)
 
@@ -96,7 +100,7 @@ export function NodeGraph() {
 	return (
 		<Container>
 			{!nodes.length && <Text>내 프로필 또는 캐릭터 프로필을 추가하세요.</Text>}
-			<Graph graph={{ nodes, edges }} options={graphOptions} style={graphStyles} />
+			<Graph graph={{ nodes, edges }} options={graphOptions} style={graphStyles()} />
 			<Section>
 				{selectedCharacters.map(character => (
 					<NodeRemoveButton key={character.id} id={character.id}>
@@ -113,11 +117,12 @@ export function NodeGraph() {
 }
 
 const Container = styled.div`
-	width: 800px;
+	max-width: 800px;
 `
 
 const Section = styled.section`
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
 `
 
