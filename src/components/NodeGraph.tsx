@@ -2,12 +2,12 @@ import { CSSProperties, useCallback } from 'react'
 
 import { useRecoilValue } from 'recoil'
 import Graph, { Node, Edge } from 'react-graph-vis'
+import styled from 'styled-components'
 
 import { myCenterModeState, selectedCharactersState } from '~common/store'
 import { NodeRemoveButton } from './NodeRemoveButton'
-import { CharacterInterface, COLOR, MY_PROFILE_ID } from '~common/app.model'
+import { CharacterInterface, MY_PROFILE_ID } from '~common/app.model'
 import { graphOptions, mbtiEdges, RADIUS } from '~common/graph.model'
-import styled from 'styled-components'
 
 const randomPoints = () => {
 	const negative = Math.random() < 0.5 ? -1 : 1
@@ -45,7 +45,7 @@ const getTupleEdges = (characters: CharacterInterface[]) => {
 }
 
 const graphStyles: CSSProperties = {
-	width: '800px',
+	width: '100%',
 	height: '800px'
 }
 
