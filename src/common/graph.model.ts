@@ -5,6 +5,9 @@ import { COLOR, MBTI } from './app.model'
 export const RADIUS = 300
 
 export const graphOptions: Options = {
+	interaction: {
+		zoomView: false
+	},
 	nodes: {
 		physics: false,
 		borderWidth: 5,

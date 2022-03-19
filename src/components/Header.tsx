@@ -19,6 +19,7 @@ export function Header() {
 const Container = styled.header`
 	position: sticky;
 	top: 0;
+	width: 100%;
 	padding: 20px;
 	background-color: ${COLOR.GRAY3};
 	background-image: url(/banner.png);
@@ -28,8 +29,6 @@ const Container = styled.header`
 	box-shadow: 0 3px 8px ${COLOR.GRAY3};
 	z-index: 1;
 	h1 {
-		width: 800px;
-		margin: auto;
 		a {
 			color: white;
 			font-size: 24px;

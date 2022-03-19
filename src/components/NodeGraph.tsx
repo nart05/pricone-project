@@ -89,14 +89,14 @@ export function NodeGraph() {
 		}
 	})
 
-	const isNodes = nodes.length > 0
-
 	const edges: Edge[] = myCenterMode
 		? getMyCenterEdges(selectedCharacters)
 		: getTupleEdges(selectedCharacters)
 
 	return (
-		<>
+		<Container>
+			{!nodes.length && <Text>내 프로필 또는 캐릭터 프로필을 추가하세요.</Text>}
+			<Graph graph={{ nodes, edges }} options={graphOptions} style={graphStyles} />
 			<Section>
 				{selectedCharacters.map(character => (
 					<NodeRemoveButton key={character.id} id={character.id}>
@@ -108,14 +108,13 @@ export function NodeGraph() {
 					</NodeRemoveButton>
 				))}
 			</Section>
-			{isNodes ? (
-				<Graph graph={{ nodes, edges }} options={graphOptions} style={graphStyles} />
-			) : (
-				<Text>내 프로필 또는 캐릭터 프로필을 추가하세요.</Text>
-			)}
-		</>
+		</Container>
 	)
 }
+
+const Container = styled.div`
+	max-width: 800px;
+`
 
 const Section = styled.section`
 	display: flex;
@@ -128,7 +127,7 @@ const Img = styled.img`
 `
 
 const Text = styled.p`
-	padding: 60px 0;
+	padding: 50px 0;
 	text-align: center;
 	font-size: 20px;
 `
