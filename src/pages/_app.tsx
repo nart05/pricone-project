@@ -19,6 +19,10 @@ export default function RootApp({ Component, pageProps }: AppProps) {
 					property="og:url"
 					content="https://pricone-project.vercel.app/characters/페코린느.png"
 				/>
+				<script
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1869403993129826"
+					crossOrigin="anonymous"></script>
 			</Head>
 			<GlobalStyle />
 			<RecoilRoot>
