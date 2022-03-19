@@ -1,7 +1,8 @@
+import styled from 'styled-components'
+
 import { Characters } from '~components/Characters'
 import { NodeGraph } from '~components/NodeGraph'
 import { MyProfile } from '~components/MyProfile'
-import styled from 'styled-components'
 
 export default function Main() {
 	return (

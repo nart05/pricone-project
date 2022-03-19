@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 import { useRecoilState, useRecoilValue } from 'recoil'
 import styled, { css } from 'styled-components'
@@ -13,6 +14,10 @@ export function MyProfile({}: MyProfileProps) {
 	const isMyProfile = !!myProfile
 	const [myCenterMode, setMyCenterMode] = useRecoilState(myCenterModeState)
 	const router = useRouter()
+
+	useEffect(() => {
+		router.prefetch('/my-mbti')
+	}, [])
 
 	const goToMyMBTI = () => {
 		router.push('/my-mbti')
